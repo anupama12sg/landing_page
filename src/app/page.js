@@ -5,11 +5,11 @@ export default function Home() {
     return (
         <div className="m-12">
 
-            <p className="text-3xl underline underline-offset-8 "><span className="italic">Hello!</span> It's me, <span class="text-orange-400">Anu</span>.</p>
+            <p className="text-3xl underline underline-offset-8"><span className="italic">Hello!</span> It is me, <span class="text-orange-400">Anu</span>.</p>
             <br></br>
             <p><span className="text-purple-400">Welcome </span> to this little corner of my world.</p>
             <br></br>
-            <p>I'm a <span class="text-orange-400">Software Developer</span>. <br></br> <br></br> I like teaching and my true passion lies in coding. <br></br> <br></br> I also like crafting technical articles and am an ardent reader, a wordsmith in the making. <br></br><br></br>My dream is to fill my days with the joy of coding, tackling real-life challenges via code and sharing my knowledge through written insights.  </p>
+            <p>I am a <span class="text-orange-400">Software Developer</span>. <br></br> <br></br> I like teaching and my true passion lies in coding. <br></br> <br></br> I also like crafting technical articles and am an ardent reader, a wordsmith in the making. <br></br><br></br>My dream is to fill my days with the joy of coding, tackling real-life challenges via code and sharing my knowledge through written insights.  </p>
             <br></br>
             <p>My interests span across <span class="text-orange-400">Software (Full-Stack) Development, Web2, Web3, petting cats</span> and my eclectic hobbies include exploring <span class="text-blue-400">International Relations</span>, indulging in culinary delights and expressing myself through the art of painting.</p>
             <div>
