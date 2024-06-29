@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Home() {
     return (
         <div className="m-12">
-
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2226%22 font-size=%2226%22>✨</text></svg>"></link>)
             <p className="text-3xl underline underline-offset-8"><span className="italic">Hello!</span> It is me, <span class="text-orange-400">Anu</span>.</p>
             <br></br>
             <p><span className="text-purple-400">Welcome </span> to this little corner of my world.</p>
