@@ -34,7 +34,7 @@ export default function Home() {
             <br></br>
             <p><center>I am a <span class="text-green-400">Software Developer</span>. <br></br> <br></br> I like teaching and my true passion lies in coding. <br></br> <br></br> I also like crafting technical articles and am an ardent reader, a wordsmith in the making. <br></br><br></br>My dream is to fill my days with the joy of coding, tackling real-life challenges via code and sharing my knowledge through written insights.</center></p>
             <br></br>
-            <p><center>My interests span across <span class="text-purple-400">Software (Full-Stack) Development, Web2, Web3, petting cats</span> and my eclectic hobbies include exploring <span class="text-purple-400">International Relations</span>, indulging in culinary delights and expressing myself through the art of painting.</center></p>
+            <p><center>My interests span across <span class="text-green-400">Software (Full-Stack) Development, Web2, Web3, petting cats</span> and my eclectic hobbies include exploring <span class="text-green-400">International Relations</span>, indulging in culinary delights and expressing myself through the art of painting.</center></p>
             <div>
                 <br></br>
                 <br></br>
