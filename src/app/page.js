@@ -5,37 +5,47 @@ import GitHub from "./assets/github-mark-white.png"
 import Medium from "./assets/medium.png"
 import Backg from "./assets/pngegg.png"
 
+import Vine from "./assets/vine.png"
+
 export function Background() {
     return (
         <Image
-        alt="Background Icon"
-        src={Backg}
-        placeholder="blur"
-        quality={100}
-        fill
-        sizes="100vw"
-        style={{
-          objectFit: 'cover',
-        }}
-      />
+            alt="Background Icon"
+            src={Backg}
+            placeholder="blur"
+            quality={100}
+            fill
+            sizes="100vw"
+            style={{
+                objectFit: 'cover',
+            }}
+        />
     )
-  }
+}
 
 export default function Home() {
     return (
         <div className="m-12">
 
             <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2226%22 font-size=%2226%22>✨</text></svg>"></link>
-            <p className="text-3xl underline underline-offset-8  "><center><span className="italic">Hello!</span> It is me, <span class="text-purple-400">Anu</span>.</center></p>
+            <p className="text-3xl underline underline-offset-8  "><center><span className="italic">Hello!</span> It is me, <span class="text-green-400">Anu</span>.</center></p>
             <br></br>
-            <p><center><span className="text-purple-400">Welcome </span> to this little corner of my world.</center></p>
+            <p><center><span className="text-black-400">Welcome </span> to this little corner of my world.</center></p>
             <br></br>
-            <p><center>I am a <span class="text-purple-400">Software Developer</span>. <br></br> <br></br> I like teaching and my true passion lies in coding. <br></br> <br></br> I also like crafting technical articles and am an ardent reader, a wordsmith in the making. <br></br><br></br>My dream is to fill my days with the joy of coding, tackling real-life challenges via code and sharing my knowledge through written insights.</center></p>
+            <p><center>I am a <span class="text-green-400">Software Developer</span>. <br></br> <br></br> I like teaching and my true passion lies in coding. <br></br> <br></br> I also like crafting technical articles and am an ardent reader, a wordsmith in the making. <br></br><br></br>My dream is to fill my days with the joy of coding, tackling real-life challenges via code and sharing my knowledge through written insights.</center></p>
             <br></br>
             <p><center>My interests span across <span class="text-purple-400">Software (Full-Stack) Development, Web2, Web3, petting cats</span> and my eclectic hobbies include exploring <span class="text-purple-400">International Relations</span>, indulging in culinary delights and expressing myself through the art of painting.</center></p>
             <div>
                 <br></br>
                 <br></br>
+
+                <center><Image
+                src={Vine}
+                width={150}
+                height={500}
+                alt="Vine icon"
+            /></center>
+
                 <div class="flex justify-center">
                     <div class="flex flex-row ... gap-10 grid-cols-4">
                         <div><a href="https://x.com/Anu31415" target="_blank" rel="noopener noreferrer">
