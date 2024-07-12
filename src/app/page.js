@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import Twitter from "./assets/twitter.jpg"
 import LinkedIn from "./assets/lin.png"
@@ -6,6 +8,7 @@ import Medium from "./assets/medium.png"
 import Backg from "./assets/pngegg.png"
 
 import Vine from "./assets/vine.png"
+import { useEffect, useState } from "react";
 
 export function Background() {
     return (
@@ -24,11 +27,35 @@ export function Background() {
 }
 
 export default function Home() {
+    const [text, setText] = useState('');
+    const [isTyping, setIsTyping] = useState(false);
+
+    useEffect(() => {
+        const typeWriter = async () => {
+            setIsTyping(true); // Start displaying the cursor
+
+            const introText = "Hello! It is me, Anu.";
+            for (let i = 0; i < introText.length; i++) {
+                await new Promise((resolve) => setTimeout(resolve, 175)); // Adjust typing speed here
+                setText(introText.substring(0, i + 1));
+            }
+
+            setIsTyping(false); // Stop displaying the cursor (optional)
+        };
+
+        typeWriter(); // Call the typing function
+    }, []); // Run the effect only once on component mount
+
     return (
         <div className="m-12">
-
             <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2226%22 font-size=%2226%22>✨</text></svg>"></link>
-            <p className="text-3xl underline underline-offset-8  "><center><span className="italic">Hello!</span> It is me, <span class="text-green-400">Anu</span>.</center></p>
+
+
+            <div class="text-container">
+                <p class="text-3xl underline underline-offset-8">
+                   <center><span className="italic" >{isTyping ? '' : ''}</span> {text}</center> 
+                </p>
+            </div>
             <br></br>
             <p><center><span className="text-black-400">Welcome </span> to this little corner of my world.</center></p>
             <br></br>
@@ -40,11 +67,11 @@ export default function Home() {
                 <br></br>
 
                 <center><Image
-                src={Vine}
-                width={150}
-                height={500}
-                alt="Vine icon"
-            /></center>
+                    src={Vine}
+                    width={150}
+                    height={500}
+                    alt="Vine icon"
+                /></center>
 
                 <div class="flex justify-center">
                     <div class="flex flex-row ... gap-10 grid-cols-4">
