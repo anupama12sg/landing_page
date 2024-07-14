@@ -50,10 +50,9 @@ export default function Home() {
         <div className="m-12">
             <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2226%22 font-size=%2226%22>✨</text></svg>"></link>
 
-
             <div class="text-container">
                 <p class="text-3xl underline underline-offset-8">
-                   <center><span className="italic" >{isTyping ? '' : ''}</span> {text}</center> 
+                    <center><span className="italic" >{isTyping ? '' : ''}</span> {text}</center>
                 </p>
             </div>
             <br></br>
@@ -64,37 +63,35 @@ export default function Home() {
             <p><center>My interests span across <span class="text-green-400">Software (Full-Stack) Development, Web2, Web3, petting cats</span> and my eclectic hobbies include exploring <span class="text-green-400">International Relations</span>, indulging in culinary delights and expressing myself through the art of painting.</center></p>
             <div>
                 <br></br>
-                <br></br>
-
                 <center><Image
                     src={Vine}
                     width={150}
                     height={500}
                     alt="Vine icon"
                 /></center>
-
+                <br></br>
                 <div class="flex justify-center">
                     <div class="flex flex-row ... gap-10 grid-cols-4">
                         <div><a href="https://x.com/Anu31415" target="_blank" rel="noopener noreferrer">
                             <Image
                                 src={Twitter}
-                                width={30}
-                                height={30}
+                                width={50}
+                                height={50}
                                 alt="Twitter icon"
                             /></a></div>
                         <div><a href="https://www.linkedin.com/in/anupama1208/" target="_blank" rel="noopener noreferrer">
                             <Image
                                 src={LinkedIn}
-                                width={45}
-                                height={45}
+                                width={70}
+                                height={70}
                                 alt="LinkedIn icon"
                             />
                         </a></div>
                         <div><a href="https://github.com/anupama12sg" target="_blank" rel="noopener noreferrer">
                             <Image
                                 src={GitHub}
-                                width={30}
-                                height={30}
+                                width={50}
+                                height={50}
                                 alt="GitHub icon"
                             />
                         </a></div>
@@ -102,8 +99,8 @@ export default function Home() {
                             <a href="https://medium.com/@anupama12sg/the-start-of-something-something-great-b3865db86881" target="_blank" rel="noopener noreferrer">
                                 <Image
                                     src={Medium}
-                                    width={30}
-                                    height={30}
+                                    width={50}
+                                    height={50}
                                     alt="Medium icon"
                                 />
                             </a>
@@ -111,6 +108,9 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <br></br>
+            <br></br>
+            <p><center><span className="text-green-250 italic">© 2024 Anupama Singh</span></center></p>
         </div>
     );
 }
