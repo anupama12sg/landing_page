@@ -31,18 +31,15 @@ export default function Home() {
 
   return (
     <div className={`min-h-screen transition-colors duration-500 ${theme == "" ? "content-body" : "dark content-body-dark"}`}>
-      <button
-        className="absolute top-4 right-4 p-2 bg-gray-200 dark:bg-white dark:text-black rounded"
-        onClick={() => setTheme(theme === '' ? 'Dark' : '')} // "" == light mode
-      >
-        {theme === '' ? 'Dark' : 'Bright'}
-        <Image
-          src={theme === '' ? Dark : Bright}
-          width={50}
-          height={50}
-          alt={theme === '' ? "Dark Mode" : "Light Mode"}
-        />
-      </button>
+      
+      < Image
+        className="absolute top-6 right-10 "
+        onClick={() => setTheme(theme === '' ? 'Dark' : '')}
+        src={theme === '' ? Dark : Bright}
+        width={40}
+        height={40}
+        alt={theme === '' ? "Dark Mode" : "Light Mode"}
+      />
 
       <div>
         <link rel="icon"
