@@ -6,6 +6,8 @@ import LinkedIn from "./assets/lin.png";
 import GitHub from "./assets/github.png";
 import Medium from "./assets/medium.png";
 import Vine from "./assets/vine.png";
+import Bright from "./assets/brightness.png"
+import Dark from "./assets/night-mode.png"
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -31,14 +33,20 @@ export default function Home() {
     <div className={`min-h-screen transition-colors duration-500 ${theme == "" ? "content-body" : "dark content-body-dark"}`}>
       <button
         className="absolute top-4 right-4 p-2 bg-gray-200 dark:bg-white dark:text-black rounded"
-        onClick={() => setTheme(theme === '' ? 'dark' : '')} // "" == light mode
+        onClick={() => setTheme(theme === '' ? 'Dark' : '')} // "" == light mode
       >
-        {theme === '' ? 'Dark Mode' : 'Light Mode'}
+        {theme === '' ? 'Dark' : 'Bright'}
+        <Image
+          src={theme === '' ? Dark : Bright}
+          width={50}
+          height={50}
+          alt={theme === '' ? "Dark Mode" : "Light Mode"}
+        />
       </button>
 
       <div>
-        <link rel="icon" 
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2226%22 font-size=%2226%22>✨</text></svg>">
+        <link rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2226%22 font-size=%2226%22>✨</text></svg>">
         </link>
       </div>
 
@@ -50,9 +58,13 @@ export default function Home() {
         <br />
         <p><center><span className="text-fuchsia-700 dark:text-purple-400">Welcome</span> to this little corner of my world.</center></p>
         <br />
-        <p><center>I am a <span className="text-fuchsia-700 dark:text-green-400">Software Developer</span>. <br /><br /> I like teaching and my true passion lies in coding. <br /><br /> I also like crafting technical articles and am an ardent reader, a wordsmith in the making. <br /><br /> My dream is to fill my days with the joy of coding, tackling real-life challenges via code and sharing my knowledge through written insights.</center></p>
+        <p><center>I am a <span className="text-fuchsia-700 dark:text-green-400">Software Developer</span>. <br /><br />
+          I like teaching and my true passion lies in coding. <br /><br />
+          I also like crafting technical articles and am an ardent reader, a wordsmith in the making. <br /><br />
+          My dream is to fill my days with the joy of coding, tackling real-life challenges via code and sharing my knowledge through written insights.</center></p>
         <br />
         <p><center>My interests span across <span className="text-fuchsia-700 dark:text-green-400">Software (Full-Stack) Development, Web2, Web3, petting cats</span> and my eclectic hobbies include exploring <span className="text-fuchsia-700 dark:text-green-400">International Relations</span>, indulging in culinary delights and expressing myself through the art of painting.</center></p>
+
         <div>
           <br />
           <center>
@@ -66,6 +78,7 @@ export default function Home() {
           <br />
           <div className="flex justify-center">
             <div className="flex flex-row gap-10 grid-cols-4">
+
               <div>
                 <a href="https://x.com/Anu31415" target="_blank" rel="noopener noreferrer">
                   <Image
@@ -76,6 +89,7 @@ export default function Home() {
                   />
                 </a>
               </div>
+
               <div>
                 <a href="https://www.linkedin.com/in/anupama1208/" target="_blank" rel="noopener noreferrer">
                   <Image
@@ -86,6 +100,7 @@ export default function Home() {
                   />
                 </a>
               </div>
+
               <div>
                 <a href="https://github.com/anupama12sg" target="_blank" rel="noopener noreferrer">
                   <Image
@@ -96,6 +111,7 @@ export default function Home() {
                   />
                 </a>
               </div>
+
               <div>
                 <a href="https://medium.com/@anupama12sg/the-start-of-something-something-great-b3865db86881" target="_blank" rel="noopener noreferrer">
                   <Image
