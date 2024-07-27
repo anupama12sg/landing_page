@@ -10,8 +10,8 @@ export default function Milestones() {
       <br></br>
       <center><h1 className="text-2xl">Milestones</h1></center>
       <br></br>
-      <div class="grid grid-cols-2 gap-4">
-        <div className="bg-sky-200 text-center">International Conference on Intelligent Computing and Big Data Analytics 2024 (ICICBDA-2024)
+      <div class="grid grid-cols-2 gap-4  ">
+        <div className="bg-sky-200 text-center ml-10">International Conference on Intelligent Computing and Big Data Analytics 2024 (ICICBDA-2024)
           
           <center><></><Image
             src={RAIT}
@@ -21,7 +21,7 @@ export default function Milestones() {
           /></center>
           
         </div>
-        <div className="bg-sky-300 text-center">8th ICTIS (International Conference on Information and Communication Technology for Intelligent Systems) 2024, University of Nevada-Las Vegas, USA
+        <div className="bg-sky-300 text-center mr-10">8th ICTIS (International Conference on Information and Communication Technology for Intelligent Systems) 2024, University of Nevada-Las Vegas, USA
           <center><Image
             src={LVNV}
             width={200}
