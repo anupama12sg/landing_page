@@ -6,12 +6,28 @@ import LinkedIn from "./assets/lin.png";
 import GitHub from "./assets/github.png";
 import Medium from "./assets/medium.png";
 import Vine from "./assets/vine.png";
-import Bright from "./assets/brightness.png"
-import Dark from "./assets/night-mode.png"
+import Bright from "./assets/brightness.png";
+import Dark from "./assets/night-mode.png";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const [theme, setTheme] = useState("");
+
+  useEffect(() => {
+    // Read theme from local storage on component mount
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      setTheme(storedTheme);
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "" ? "Dark" : "";
+    setTheme(newTheme);
+    // Save theme to local storage
+    localStorage.setItem("theme", newTheme);
+  };
+
   const [text, setText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
 
@@ -31,10 +47,9 @@ export default function Home() {
 
   return (
     <div className={`min-h-screen transition-colors duration-500 ${theme == "" ? "content-body" : "dark content-body-dark"}`}>
-      
-      < Image
-        className="absolute top-6 right-10 "
-        onClick={() => setTheme(theme === '' ? 'Dark' : '')}
+      <Image
+        className="absolute top-6 right-10"
+        onClick={toggleTheme}
         src={theme === '' ? Dark : Bright}
         width={40}
         height={40}
