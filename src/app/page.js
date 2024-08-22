@@ -22,10 +22,18 @@ export default function Home() {
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === "" ? "Dark" : "";
-    setTheme(newTheme);
+    // const newTheme = theme === "" ? "Dark" : "";
+
+    if (theme===''){
+      setTheme("Dark");
+      localStorage.setItem("theme", "Dark")
+    } else {
+      setTheme('');
+      localStorage.setItem("theme", "")
+    }
+
     // Save theme to local storage
-    localStorage.setItem("theme", newTheme);
+    //localStorage.setItem("theme", newTheme);
   };
 
   const [text, setText] = useState('');
