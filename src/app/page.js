@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Twitter from "./assets/twitter.jpg";
@@ -22,18 +22,13 @@ export default function Home() {
   }, []);
 
   const toggleTheme = () => {
-    // const newTheme = theme === "" ? "Dark" : "";
-
-    if (theme===''){
+    if (theme === '') {
       setTheme("Dark");
-      localStorage.setItem("theme", "Dark")
+      localStorage.setItem("theme", "Dark");
     } else {
       setTheme('');
-      localStorage.setItem("theme", "")
+      localStorage.setItem("theme", "");
     }
-
-    // Save theme to local storage
-    //localStorage.setItem("theme", newTheme);
   };
 
   const [text, setText] = useState('');
@@ -55,6 +50,13 @@ export default function Home() {
 
   return (
     <div className={`min-h-screen transition-colors duration-500 ${theme == "" ? "content-body" : "dark content-body-dark"}`}>
+      <div>
+        <link
+          rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2226%22 font-size=%2226%22>✨</text></svg>"
+        />
+      </div>
+
       <Image
         className="absolute top-6 right-10"
         onClick={toggleTheme}
@@ -63,19 +65,20 @@ export default function Home() {
         height={40}
         alt={theme === '' ? "Dark Mode" : "Light Mode"}
       />
-
-      <div>
-        <link rel="icon"
-          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2226%22 font-size=%2226%22>✨</text></svg>">
-        </link>
-      </div>
+      <br></br>
+      <nav className="flex justify-center space-x-10 text-lg font-semibold">
+        <a href="http://localhost:3000/milestones" className="hover:underline">Milestones</a>
+        <a href="http://localhost:3000/projects" className="hover:underline">Projects</a>
+        
+      </nav>
 
       <div className="text-container">
         <br></br>
         <p className="text-3xl underline underline-offset-8">
           <center><span className="italic">{isTyping ? '' : ''}</span> {text}</center>
         </p>
-        <br />
+
+        <br></br>
         <p><center><span className="text-fuchsia-700 dark:text-purple-400">Welcome</span> to this little corner of my world.</center></p>
         <br />
         <p><center>I am a <span className="text-fuchsia-700 dark:text-green-400">Software Developer</span>. <br /><br />
@@ -98,7 +101,6 @@ export default function Home() {
           <br />
           <div className="flex justify-center">
             <div className="flex flex-row gap-10 grid-cols-4">
-
               <div>
                 <a href="https://x.com/Anu31415" target="_blank" rel="noopener noreferrer">
                   <Image
