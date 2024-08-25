@@ -69,7 +69,6 @@ export default function Home() {
       <nav className="flex justify-center space-x-10 text-lg font-semibold">
         <a href="http://localhost:3000/milestones" className="hover:underline">Milestones</a>
         <a href="http://localhost:3000/projects" className="hover:underline">Projects</a>
-        
       </nav>
 
       <div className="text-container">
